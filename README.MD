@@ -11,7 +11,7 @@ npm install
 ```
 3. Run the following command to start the server
 ```
-node src/index.js
+node index.js
 ```
 4. Open the browser and go to the following URL
 ```
