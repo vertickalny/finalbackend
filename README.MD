@@ -3,7 +3,7 @@
 ## Instructions 
 1. Clone the repository
 ```
-git clone git@github.com:VsProger/web-app.git
+git clone git@github.com:vertickalny/finalbackend.git
 ```
 2. Run the following commands to install the required packages
 ```
