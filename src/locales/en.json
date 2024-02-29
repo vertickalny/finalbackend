@@ -1,0 +1,46 @@
+{
+    "name": "Name:",
+    "enterUsername": "Enter your username",
+    "password": "Password:",
+    "enterPassword": "Enter your password",
+    "signUp": "SignUp",
+
+    "home": "Home",
+    "music": "Music",
+    "artists": "Artists",
+    "adminPanel": "Admin Panel",
+    "logout": "Logout",
+    "enterTheTrack": "Enter track name",
+    "search": "Search",
+    "searchResults": "Search Results",
+    "by": "by",
+    "browserDoesNotSupport": "Your browser does not support the audio element.",
+
+    "newPost": "New Post",
+    "uploadImg": "Upload Image:",
+    "postName": "Post Name:",
+    "description": "Description:",
+    "createPost": "Create Post",
+
+    "login": "Login",
+    "dontHaveAccount": "Don't have an account?",
+
+    "addNewPost": "Add New Post",
+    "createdAt": "Created At",
+    "updatedAt": "Updated At",
+    "edit": "Edit",
+    "delete": "Delete",
+    "createdBy": "Created By: Saliyev Baurzhan SE-2204",
+
+    "editPost": "Edit Post",
+    "updatePost": "Update Post",
+    "uploadImgs": "Upload Images:",
+
+    "enterArtistName": "Enter artist name",
+    "followers": "Followers:",
+    "genres": "Genres:",
+    "popularity": "Popularity:",
+    "spotifyProfile": "Spotify Profile",
+    "noImg": "No Image Available"
+
+}

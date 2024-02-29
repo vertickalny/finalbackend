@@ -1,0 +1,45 @@
+{
+    "name": "Имя:",
+    "enterUsername": "Введите имя пользователя",
+    "password": "Пароль:",
+    "enterPassword": "Введите пароль",
+    "signUp": "Зарегистрироваться",
+
+    "home": "Главная",
+    "music": "Музыка",
+    "artists": "Исполнители",
+    "adminPanel": "Административная панель",
+    "logout": "Выйти",
+    "enterTheTrack": "Введите название трека",
+    "search": "Поиск",
+    "searchResults": "Результаты поиска",
+    "by": "от",
+    "browserDoesNotSupport": "Ваш браузер не поддерживает аудио элемент.",
+
+    "newPost": "Новый пост",
+    "uploadImg": "Загрузить изображение:",
+    "postName": "Название поста:",
+    "description": "Описание:",
+    "createPost": "Создать пост",
+
+    "login": "Войти",
+    "dontHaveAccount": "Нет аккаунта?",
+
+    "addNewPost": "Добавить новый пост",
+    "createdAt": "Создано",
+    "updatedAt": "Обновлено",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "createdBy": "Создано: Салиев Бауржан SE-2204",
+
+    "editPost": "Редактировать пост",
+    "updatePost": "Обновить пост",
+    "uploadImgs": "Загрузить изображения:",
+
+    "enterArtistName": "Введите имя исполнителя",
+    "followers": "Подписчики:",
+    "genres": "Жанры:",
+    "popularity": "Популярность:",
+    "spotifyProfile": "Профиль Spotify",
+    "noImg": "Изображение отсутствует"
+}

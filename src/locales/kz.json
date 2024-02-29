@@ -1,0 +1,45 @@
+{
+    "name": "Аты:",
+    "enterUsername": "Пайдаланушы атын енгізіңіз",
+    "password": "Құпия сөз:",
+    "enterPassword": "Құпия сөзді енгізіңіз",
+    "signUp": "Тіркелу",
+
+    "home": "Басты бет",
+    "music": "Музыка",
+    "artists": "Өнерпаздар",
+    "adminPanel": "Әкімшілік тақта",
+    "logout": "Шығу",
+    "enterTheTrack": "Ән атауын енгізіңіз",
+    "search": "Іздеу",
+    "searchResults": "Іздеу нәтижелері",
+    "by": "бойынша",
+    "browserDoesNotSupport": "Сіздің шолғышыңыз аудио элементті қолдамайды.",
+
+    "newPost": "Жаңа хабарлама",
+    "uploadImg": "Сурет жүктеңіз:",
+    "postName": "Хабарлама атауы:",
+    "description": "Сипаттама:",
+    "createPost": "Хабарлама жасау",
+
+    "login": "Кіру",
+    "dontHaveAccount": "Әлі тіркелген жоқсыз ба?",
+
+    "addNewPost": "Жаңа хабарлама қосу",
+    "createdAt": "Жасалған",
+    "updatedAt": "Жаңартылған",
+    "edit": "Өңдеу",
+    "delete": "Жою",
+    "createdBy": "Жасаған: Сәлиев Бауыржан SE-2204",
+
+    "editPost": "Хабарламаны өңдеу",
+    "updatePost": "Хабарламаны жаңарту",
+    "uploadImgs": "Суреттерді жүктеңіз:",
+
+    "enterArtistName": "Өнерпаз атын енгізіңіз",
+    "followers": "Жазылушылар:",
+    "genres": "Жанрлар:",
+    "popularity": "Танымалдылық:",
+    "spotifyProfile": "Spotify Профилі",
+    "noImg": "Сурет жоқ"
+}
