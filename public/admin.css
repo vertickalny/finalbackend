@@ -1,0 +1,103 @@
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/03/15/34/90/360_F_315349061_66gJr1ZgInMRB1iH0LNGucJ2iD4HU9oQ.jpg");
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+a[href='/admin/new'] {
+    background-color: #414e41;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+a[href='/admin/new']:hover {
+    background-color: #526452;
+}
+
+
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 14px 16px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #ddd;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #482626;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-right {
+    float: right;
+    background-color: #482626;
+}

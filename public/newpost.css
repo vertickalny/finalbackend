@@ -1,0 +1,113 @@
+/* Style for the container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    
+}
+
+.create-post-button {
+    background-color: #414e41;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.create-post-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #414e41;
+}
+
+/* Style for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style for form inputs and textarea */
+input[type="text"],
+input[type="file"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Adjust the width of the form elements */
+input, textarea {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.translate{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: none;
+    border: none;
+    overflow: hidden;
+    margin-left: 12px;
+    padding: auto;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 14px 16px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #000000;
+    background-color: white;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #482626;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-right {
+    float: right;
+    background-color: #482626;
+}
+
+.navbar-right:hover {
+    background-color: #ddd;
+    color: black;
+}

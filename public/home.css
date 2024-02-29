@@ -1,0 +1,195 @@
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/03/15/34/90/360_F_315349061_66gJr1ZgInMRB1iH0LNGucJ2iD4HU9oQ.jpg");
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(246, 245, 245);
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.translate{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: none;
+    border: none;
+    overflow: hidden;
+    margin-left: 12px;
+    padding: auto;
+}
+
+footer {
+    /* background-color: #333; */
+    color: black;
+    padding: 1;
+    text-align: center;
+    clear: both;
+    /* position: fixed; */
+    bottom: 10px;
+    width: 100%;
+}
+
+main {
+    padding: 2rem;
+}
+
+.button-group {
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.button-group a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Added */
+    background-color: #444;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    height: 300px;
+}
+
+.button-group a:hover {
+    transform: translateY(-5px);
+}
+
+.button-group img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-group h2 {
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+
+.button-group a h2 {
+    margin-top: auto;
+}
+
+.new-post-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #482626;
+    border-radius: 12px;
+    padding: 10px 14px;
+    color: white;
+
+}
+
+.new-post-button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.delete-button {
+    background-color: #482626;
+    color: white;
+    padding: 8px 12px;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 12px;
+    
+    display: inline;
+}
+
+.delete-button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.post-block {
+    width: 35   0px; /* Fixed width */
+    /* height: 400px; Fixed height */
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    /* overflow: hidden; Ensures the content doesn't overflow */
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    
+}
+
+.carousel div {
+    flex-shrink: 0;
+
+    /* width: 30%; */
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+}
+
+/*.container{*/
+/*    color: white;*/
+/*}*/
+
+
+#text{
+    color: white;
+}
+
+
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 14px 16px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #ddd;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #482626;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-right {
+    float: right;
+    background-color: #482626;
+}
