@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/home.css">
+    <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/"><%= t('home')%></a>
+        <a href="/music"><%= t('music')%></a>
+        <a href="/artist"><%= t('artists')%></a>
+
+    <% if (loggeduser.isAdmin) { %>
+        <a href="/admin" class="admin-button"><%= t('adminPanel')%></a>
+    <% } %>
+        
+        <div class="navbar-right">
+            <form action="/logout" method="POST">
+                <button type="submit" class="logout-button"><%= t('logout')%></button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="translate">
+        <a href="/change-lang/kz"><img src="/pictures/kz.jpg" alt="kzflag" width="40px" height="30px"></a>
+        <a href="/change-lang/en"><img src="/pictures/britain.png" alt="enflag" width="40px" height="30px"></a>
+        <a href="/change-lang/ru"><img src="/pictures/russia.png" alt="ruflag" width="40px" height="30px"></a>
+    </div>
+<main>
+    <% if (loggeduser.isAdmin) { %>
+    <div class="button-group">
+        <!-- Add New Post button -->
+        <button class="new-post-button" onclick="location.href='/newpost'"><%= t('addNewPost')%></button>
+    </div>
+    <% } %>
+    
+    <div class="container">
+        <div class="row">
+             <% posts.forEach(function(post){ %>
+                <div class="col-md-4">
+              <div class="post-block">
+                  <div id="carousel<%= post.id %>" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <% post.images.forEach(function(image, index){ %>
+                              <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                                   <img src="<%= image %>" class="d-block w-100" alt="Post image">
+                             </div>
+                         <% }); %>
+                      </div>
+                      <a class="carousel-control-prev" href="#carousel<%= post.id %>" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                        </a>
+                <a class="carousel-control-next" href="#carousel<%= post.id %>" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div id="text">
+            <h2><%= post.name %></h2>
+            <p><%= post.description %></p>
+            
+            <p><%= t('createdAt')%> <%= post.createdAt %></p>
+            
+            <p><%= t('updatedAt')%> <%= post.updatedAt %></p>
+              </div>
+            
+            <% if (loggeduser.isAdmin) { %>
+                <div class="button-group" style="display: inline-block;">
+                    <form action="/editPost/<%= post.id %>" method="GET" style="display: inline;">
+                   
+                        <!-- Edit Post button -->
+                        <button type="submit" class="delete-button"><%= t('edit')%></button>
+                    </form>
+                </div>
+                <div class="button-group" style="display: inline-block;">
+                    <form action="/deletePost/<%= post.id %>?_method=DELETE" method="POST" style="display: inline;">
+                    <!-- Delete Post button -->
+                    <button type="submit" class="delete-button"><%= t('delete')%></button>
+                    </form>
+                </div>
+                <% } %>
+            <!-- <p>Created at: <%= formatDate(post.createdAt) %></p>
+            <p>Updated at: <%= formatDate(post.createdAt) %></p> -->
+            <!-- <p>Deleted at: <%= post.deletedAt %></p> -->
+        </div>
+    </div>
+    <% }); %>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p><%= t('createdBy Zhan')%></p>
+</footer>
+
+</body>
+
+</html>

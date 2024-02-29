@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+
+    <link rel="stylesheet" href="/editUser.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Add New User</h2>
+    <form action="/admin/new" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your username" required autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="password" required>
+        </div>
+        <div class="form-group">
+            <label for="isAdmin">Is Admin:</label>
+            <input type="checkbox" id="isAdmin" name="isAdmin">
+        </div>
+        <button type="submit" class="submit-btn">Add</button>
+    </form>
+</div>
+
+</body>
+</html>

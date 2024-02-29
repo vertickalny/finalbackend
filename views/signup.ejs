@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="translate">
+        <a href="/change-lang/kz"><img src="/pictures/kz.jpg" alt="kzflag" width="40px" height="30px"></a>
+        <a href="/change-lang/en"><img src="/pictures/britain.png" alt="enflag" width="40px" height="30px"></a>
+        <a href="/change-lang/ru"><img src="/pictures/russia.png" alt="ruflag" width="40px" height="30px"></a>
+    </div>
+<div class="form-container">
+    <h2>SignUp</h2>
+    <form action="/signup" method="post">
+        <div class="form-group">
+            <label for="name"><%= t('name') %></label>
+            <input type="text" id="name" name="username" placeholder="<%= t('enterUsername') %>" required autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="password"><%= t('password') %></label>
+            <input type="password" id="password" name="password" placeholder="<%= t('enterPassword') %>" required>
+        </div>
+        <button type="submit" class="submit-btn"><%= t('signUp') %></button>
+    </form>
+</div>
+
+</body>
+</html>

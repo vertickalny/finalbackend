@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Artist Search</title>
+    <link rel="stylesheet" type="text/css" href="/artists.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><%= t('home') %></a>
+        <a href="/music"><%= t('music') %></a>
+        <a href="/artist"><%= t('artists') %></a>
+
+        <% if (loggeduser.isAdmin) { %>
+            <a href="/admin" class="admin-button"><%= t('adminPanel') %></a>
+        <% } %>
+        
+        <div class="navbar-right">
+            <form action="/logout" method="POST">
+                <button type="submit" class="logout-button"><%= t('logout') %></button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="translate">
+        <a href="/change-lang/kz"><img src="/pictures/kz.jpg" alt="kzflag" width="40px" height="30px"></a>
+        <a href="/change-lang/en"><img src="/pictures/britain.png" alt="enflag" width="40px" height="30px"></a>
+        <a href="/change-lang/ru"><img src="/pictures/russia.png" alt="ruflag" width="40px" height="30px"></a>
+    </div>
+    <form action="/artist-result" method="GET" class="search-form">
+        <input type="text" name="artist" placeholder="<%= t('enterArtistName') %>" class="search-input">
+        <button type="submit" class="search-button"><%= t('search') %></button>
+    </form>
+    <h1 class="search-results-heading"><%= t('searchResults') %></h1>
+    <ul class="artist-list">
+        <% artists.forEach(artist => { %>
+            <li class="artist-item">
+                <h2 class="artist-name"><%= artist.name %></h2>
+                <p class="artist-followers"><%= t('followers') %> <%= artist.followers.total %></p>
+                <p class="artist-genres"><%= t('genres') %> <%= artist.genres.join(', ') %></p>
+                <p class="artist-popularity"><%= t('popularity') %> <%= artist.popularity %></p>
+                <p class="artist-uri">Spotify URI: <%= artist.uri %></p>
+                <p class="artist-profile-link"><a href="<%= artist.external_urls.spotify %>" class="profile-link"><%= t('spotifyProfile') %></a></p>
+                <% if(artist.images && artist.images.length > 0) { %>
+                    <img src="<%= artist.images[0].url %>" alt="<%= artist.name %> Image" class="artist-image">
+                <% } else { %>
+                    <p><%= t('noImg') %></p>
+                <% } %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

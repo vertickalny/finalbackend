@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deezer Track Finder</title>
+    <link rel="stylesheet" href="/music.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"><%= t('home')%></a>
+        <a href="/music"><%= t('music')%></a>
+        <a href="/artist"><%= t('artists')%></a>
+
+    <% if (loggeduser.isAdmin) { %>
+        <a href="/admin" class="admin-button"><%= t('adminPanel')%></a>
+    <% } %>
+        
+        <div class="navbar-right">
+            <form action="/logout" method="POST">
+                <button type="submit" class="logout-button"><%= t('logout')%></button>
+            </form>
+        </div>
+        
+    </div>
+    <div class="translate">
+        <a href="/change-lang/kz"><img src="/pictures/kz.jpg" alt="kzflag" width="40px" height="30px"></a>
+        <a href="/change-lang/en"><img src="/pictures/britain.png" alt="enflag" width="40px" height="30px"></a>
+        <a href="/change-lang/ru"><img src="/pictures/russia.png" alt="ruflag" width="40px" height="30px"></a>
+    </div>
+    <form action="/music-search" method="GET" class="search-form">
+        <input type="text" name="track" placeholder="<%= t('enterTheTrack')%>">
+        <button type="submit" class="search-button"><%= t('search')%></button>
+    </form>
+    <h1><%= t('searchResults')%></h1>
+    <div class="track-container">
+        <% tracks.forEach(track => { %>
+            <div class="track-block">
+                <img src="<%= track.album.cover %>" alt="Album Cover" class="album-cover">
+                <div class="track-info">
+                    <p><%= track.title %> <%= t('by')%> <%= track.artist.name %></p>
+                    <audio controls>
+                        <source src="<%= track.preview %>" type="audio/mpeg">
+                        <%= t('browserDoesntSupport')%>
+                    </audio>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
